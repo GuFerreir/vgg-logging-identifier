@@ -89,11 +89,11 @@ def test_image_belongs_to_class1(model, query_img_path, data_dir):
     avg_similarity = np.mean(similarities)
 
     # Check if the average similarity is greater than 0.55
-    if avg_similarity > 0.5:
-        print("É um cachorrinho!! 🤩🤩🤩 (Similaridade: " + str(avg_similarity) + " )")
+    if avg_similarity > 0.7:
+        print("ALTA probabilidade de apresentar desmatamento (" + str(avg_similarity)+ ")")
     else:
-        print("Não é um cachorrinho 🥺🥺🥺 (Similaridade: " + str(avg_similarity) + " )")
+        print("BAIXA probabilidade de apresentar desmatamento (" + str(avg_similarity)+ ")")
 
 # Example usage
-query_image_path = 'images/test/class1/fakedog1-test.jpg'
+query_image_path = 'images/test/class1/test_135.jpg'
 test_image_belongs_to_class1(model, query_image_path, train_dir)
