@@ -34,8 +34,9 @@ def predict_class(model, query_img_path, target_size=(500, 500)):
     class_labels = sorted(os.listdir(train_dir))
     predicted_class_label = class_labels[predicted_class_index]
 
-    print(f"The image most closely resembles class: {predicted_class_label}")
+    return (f"{predicted_class_label}")
 
 # Example usage
-query_image_path = 'images/test/class2-city/test_7.jpg'
-predict_class(model, query_image_path)
+# query_image_path = 'images/test/class1-deforestation/test_16.jpg'
+# predicted_class = predict_class(model, query_image_path)
+# print(predicted_class)
